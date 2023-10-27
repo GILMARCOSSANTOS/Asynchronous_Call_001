@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Asynchronous Calls 001</string>
+    <string name="coroutines">Coroutines</string>
+    <string name="_0_00">0.00</string>
+    <string name="count_in_3_seconds">Count in 3 Seconds</string>
+    <string name="count_in_5_seconds">Count in 5 Seconds</string>
+    <string name="call_back">Call Back</string>
+    <string name="a_frase_tem_letra">A frase tem letra:</string>
+</resources>
