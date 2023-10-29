@@ -14,8 +14,8 @@ class MainActivity : AppCompatActivity() {
     /* Global Variables Scope: */
     private var clickCountDouble001: Double = 0.00
     private var clickCountDouble002: Double = 0.00
-    private lateinit var textViewTimer001: MaterialTextView
-    private lateinit var textViewTimer002: MaterialTextView
+    private lateinit var textViewClickCount001: MaterialTextView
+    private lateinit var textViewClickCount002: MaterialTextView
     private lateinit var buttonTimer001: MaterialButton
     private lateinit var buttonTimer002: MaterialButton
     private lateinit var buttonResetTime: MaterialButton
@@ -71,8 +71,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun updateTimers() {
 
-        textViewTimer001.text = clickCountDouble001.toString()
-        textViewTimer002.text = clickCountDouble002.toString()
+        textViewClickCount001.text = clickCountDouble001.toString()
+        textViewClickCount002.text = clickCountDouble002.toString()
     }
 
     private suspend fun incrementBefore001() {
@@ -98,8 +98,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun globalVariables() {
-        textViewTimer001 = findViewById(R.id.txtVw_time001_actvtMain)
-        textViewTimer002 = findViewById(R.id.txtVw_time002_actvtMain)
+        textViewClickCount001 = findViewById(R.id.txtVw_time001_actvtMain)
+        textViewClickCount002 = findViewById(R.id.txtVw_time002_actvtMain)
         buttonTimer001 = findViewById(R.id.bttn_time001_actvtMain)
         buttonTimer002 = findViewById(R.id.bttn_time002_actvtMain)
         buttonResetTime = findViewById(R.id.bttn_reset_actvtMain)
