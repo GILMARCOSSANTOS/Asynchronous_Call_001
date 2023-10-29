@@ -29,8 +29,8 @@ class MainActivity : AppCompatActivity() {
         globalVariables()
         buttonTimer001()
         buttonTimer002()
-        resetTime()
-        updateTimers()
+        buttonResetTimer()
+        updateClickCountDouble()
         buttonCallBack()
     }
 
@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
 
         buttonTimer001.setOnClickListener {
             lifecycleScope.launch {
-                incrementBefore001()
+                incrementTime001()
             }
         }
     }
@@ -47,44 +47,44 @@ class MainActivity : AppCompatActivity() {
 
         buttonTimer002.setOnClickListener {
             lifecycleScope.launch {
-                incrementBefore002()
+                incrementTime002()
             }
         }
     }
 
-    private fun resetTime() {
+    private fun buttonResetTimer() {
 
         buttonResetTime.setOnClickListener {
             lifecycleScope.launch {
-                resetTimers()
+                resetTimersDouble()
             }
         }
     }
 
-    private fun resetTimers() {
+    private fun resetTimersDouble() {
 
         clickCountDouble001 = 0.00
         clickCountDouble002 = 0.00
 
-        updateTimers()
+       updateClickCountDouble()
     }
 
-    private fun updateTimers() {
+    private fun updateClickCountDouble() {
 
         textViewClickCount001.text = clickCountDouble001.toString()
         textViewClickCount002.text = clickCountDouble002.toString()
     }
 
-    private suspend fun incrementBefore001() {
+    private suspend fun incrementTime001() {
         delay(3000)
         clickCountDouble001 += 1.0
-        updateTimers()
+        updateClickCountDouble()
     }
 
-    private suspend fun incrementBefore002() {
+    private suspend fun incrementTime002() {
         delay(5000)
         clickCountDouble002 += 1.0
-        updateTimers()
+        updateClickCountDouble()
     }
 
     private fun buttonCallBack() {
