@@ -12,8 +12,8 @@ import kotlinx.coroutines.launch
 class MainActivity : AppCompatActivity() {
 
     /* Global Variables Scope: */
-    private var timer001: Double = 0.00
-    private var timer002: Double = 0.00
+    private var clickCountDouble001: Double = 0.00
+    private var clickCountDouble002: Double = 0.00
     private lateinit var textViewTimer001: MaterialTextView
     private lateinit var textViewTimer002: MaterialTextView
     private lateinit var buttonTimer001: MaterialButton
@@ -63,27 +63,27 @@ class MainActivity : AppCompatActivity() {
 
     private fun resetTimers() {
 
-        timer001 = 0.00
-        timer002 = 0.00
+        clickCountDouble001 = 0.00
+        clickCountDouble002 = 0.00
 
         updateTimers()
     }
 
     private fun updateTimers() {
 
-        textViewTimer001.text = timer001.toString()
-        textViewTimer002.text = timer002.toString()
+        textViewTimer001.text = clickCountDouble001.toString()
+        textViewTimer002.text = clickCountDouble002.toString()
     }
 
     private suspend fun incrementBefore001() {
         delay(3000)
-        timer001 += 1.0
+        clickCountDouble001 += 1.0
         updateTimers()
     }
 
     private suspend fun incrementBefore002() {
         delay(5000)
-        timer002 += 1.0
+        clickCountDouble002 += 1.0
         updateTimers()
     }
 
@@ -94,7 +94,6 @@ class MainActivity : AppCompatActivity() {
                 }
                 startActivity(intent)
             }
-
         }
     }
 
